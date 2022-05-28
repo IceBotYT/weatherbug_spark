@@ -8,12 +8,12 @@ WeatherBug Spark is a service that can detect both cloud-to-ground and in-cloud 
 
 Linux:
 ```bash
-python3 -m pip install weatherbug_spark
+python3 -m pip install weatherbug-spark
 ```
 
 Windows:
 ```
-py -m pip install weatherbug_spark
+py -m pip install weatherbug-spark
 ```
 
 ## Usage
