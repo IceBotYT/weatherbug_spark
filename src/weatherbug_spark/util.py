@@ -1,7 +1,7 @@
+import base64
 import hmac
 import time
 from urllib.parse import quote
-import base64
 
 
 def _get_hmac_url(lat: str, lon: str) -> str:
