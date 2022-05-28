@@ -37,13 +37,9 @@ def _get_hmac_url(lat: str, lon: str) -> str:
             result += "&"
             dataToBeHashed += "\n"
 
-    print(dataToBeHashed)
-
     hmac_hash: str = quote(
         base64.b64encode(hmac.new(secret, dataToBeHashed.encode(), "sha256").digest())
     )
-
-    print(hmac_hash)
 
     final_url = result + f"&authid={key}&timestamp={timestamp}&hash={hmac_hash}"
     return final_url
