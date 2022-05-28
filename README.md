@@ -52,16 +52,16 @@ if __name__ == "__main__":
 
 ### `SparkResult`
 
-| Field                 | Type                  | Description                                                 |
-| --------------------- | --------------------- | ----------------------------------------------------------- |
-| alertCode             | int                   | The alert code. The higher the number, the worse the storm. |
-| alertColor            | str                   | The hex code for the color of the alert.                    |
-| closestPulseDistance  | float                 | The closest lightning strike distance in miles.             |
-| closestPulseDirection | float                 | The closest lightning strike direction in degrees.          |
-| pulseListAlert        | list[LightningStrike] | The local lightning strike locations.                       |
-| pulseListGlobal       | list[LightningStrike] | The global lightning strike locations.                      |
-| shortMessage          | str                   | The short message.                                          |
-| safetyMessage         | str                   | The long message.                                           |
+| Field                 | Type                  | Description                                                    |
+| --------------------- | --------------------- | -------------------------------------------------------------- |
+| alertCode             | int                   | The alert code. The higher the number, the closer the strikes. |
+| alertColor            | str                   | The hex code for the color of the alert.                       |
+| closestPulseDistance  | float                 | The closest lightning strike distance in miles.                |
+| closestPulseDirection | float                 | The closest lightning strike direction in degrees.             |
+| pulseListAlert        | list[LightningStrike] | The local lightning strike locations.                          |
+| pulseListGlobal       | list[LightningStrike] | The global lightning strike locations.                         |
+| shortMessage          | str                   | The short message.                                             |
+| safetyMessage         | str                   | The long message.                                              |
 
 ### `LightningStrike`
 

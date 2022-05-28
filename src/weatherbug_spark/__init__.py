@@ -7,8 +7,12 @@ import aiohttp
 from pydantic import BaseModel
 
 
-async def get_data(lat: str, lon: str) -> SparkResult:
+async def get_data(lat: str | float, lon: str | float) -> SparkResult:
     """Get data from WeatherBug Spark API."""
+    if isinstance(lat, float):
+        lat = str(lat)
+    if isinstance(lon, float):
+        lon = str(lon)
     url: str = _get_hmac_url(lat, lon)
     async with aiohttp.ClientSession() as session:
         async with session.get(url) as resp:
